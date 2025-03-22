@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Some Goats</title>
+    <link rel="stylesheet" href="css/lebron.css" />
+    <script
+      src="https://kit.fontawesome.com/b3825b3def.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header wrapper">
+      <h1>Lebron</h1>
+      <nav>
+        <button
+          class="menu-open"
+          id="btnOpen"
+          aria-label="open menu"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="menu">
+          <button
+            class="menu-close"
+            aria-label="close menu"
+            aria-controls="menu"
+            aria-expanded="true"
+          >
+            <img
+              src="images/menu-close.png"
+              id="btnClose"
+              width="58"
+              height="58"
+              alt=""
+            />
+          </button>
+          <ul class="nav-links">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Drake</a>
+            </li>
+            <li class="nav-item">
+              <a href="lebron.html" class="nav-link">Lebron</a>
+            </li>
+            <li class="nav-item">
+              <a href="denzel.html" class="nav-link">Denzel</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="wrapper">
+        <button class="modal-toggle">Open Modal</button>
+
+        <div class="modal">
+          <div class="achievements-group">
+            <h2>Join if Lebron is the Goat</h2>
+            <p>King James</p>
+            <ul class="achievements">
+              <li>NBA All-Time Leading Scorer</li>
+              <li>NBA All-Time Playoff Leading Scorer</li>
+              <li>4× NBA champion</li>
+              <li>4× NBA MVP</li>
+              <li>4x NBA Finals MVP</li>
+              <li>3× Olympic Gold Medalist</li>
+              <li>NBA Rookie of the Year</li>
+            </ul>
+          </div>
+          <form action="">
+            <div class="field">
+              <label for="fullname">Full name</label>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  id="fullname"
+                  pattern="[A-Za-z\s]{3,}"
+                  title="Enter at least 3 letters"
+                  placeholder="Full name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <div class="input-wrapper">
+                <input type="email" id="email" placeholder="email" required />
+              </div>
+            </div>
+            <button id="signup" type="submit">Sign me up!</button>
+          </form>
+        </div>
+
+        <div class="modal-overlay"></div>
+      </div>
+
+      <footer>
+        <p>Coded by: Ify Nonyelu</p>
+      </footer>
+    </main>
+    <script src="js/lebron.js"></script>
+  </body>
+</html>

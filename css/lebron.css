@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: lightcoral;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1.5rem;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  @media (width < 40em) {
+    flex-direction: column;
+    margin-top: 4rem;
+    gap: 2rem;
+  }
+}
+
+.nav-links a {
+  color: rgb(247, 110, 110);
+  font-weight: bold;
+  text-decoration: none;
+
+  @media (width > 40em) {
+    color: #fff;
+  }
+}
+
+.nav-links a:hover {
+  color: rgb(3, 136, 143);
+}
+
+.nav-item {
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.menu {
+  @media (width < 40em) {
+    background-color: rgb(142, 209, 211);
+    position: fixed;
+    padding: 1.5rem;
+    inset: 0;
+    translate: 100vw 0;
+    transition: translate 0.3s ease-in-out;
+  }
+}
+
+.menu-open {
+  display: block;
+  margin-left: auto;
+
+  @media (width > 40em) {
+    display: none;
+  }
+}
+
+/* .menu-open.active + .menu */
+.menu.show {
+  translate: 0;
+}
+
+.menu-open i {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.menu-close {
+  display: block;
+  margin-left: auto;
+  background: none;
+  border: none;
+
+  @media (width > 40em) {
+    display: none;
+  }
+}
+
+main {
+  margin-bottom: 3rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.achievements-group {
+  text-align: center;
+}
+
+.achievements-group p {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: rgb(247, 110, 110);
+}
+
+.achievements {
+  list-style: none;
+  font-weight: bold;
+}
+
+.achievements li {
+  margin-bottom: 0.5rem;
+}
+
+.modal-toggle {
+  background-color: #fff;
+  color: #000;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.modal {
+  /* max-width: 700px; */
+  color: #000;
+  background-color: rgb(142, 209, 211);
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  width: 90%;
+  max-width: 500px;
+}
+
+.modal h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.modal p {
+  margin-bottom: 1rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.field input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
+
+input:not(:placeholder-shown):valid {
+  outline: 5px solid #0cd20c;
+}
+
+input:not(:placeholder-shown):invalid {
+  outline: 5px solid red;
+}
+
+input:focus:invalid {
+  border: 5px solid gray;
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #000;
+  padding-right: 2rem; /* Space for the checkmark */
+}
+
+.input-wrapper::after {
+  content: "✓";
+  position: absolute;
+
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: green;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.input-wrapper:has(input:valid)::after {
+  opacity: 1; /* Show checkmark when input is valid */
+}
+
+#signup {
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#signup:hover {
+  background-color: rgb(3, 136, 143);
+  color: rgb(247, 110, 110);
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  position: fixed;
+  display: none;
+  z-index: 1000;
+}
+
+footer {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-top: auto;
+}

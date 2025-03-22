@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Some Goats</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/b3825b3def.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header wrapper">
+      <h1>The Goat</h1>
+      <nav>
+        <span id="nav-label" hidden>Navigation</span>
+        <button
+          id="btnOpen"
+          class="menu-open"
+          aria-expanded="false"
+          aria-labelledby="nav-label"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="menu" role="dialog" aria-labelledby="nav-label">
+          <button class="menu-close" id="btnClose" aria-label="Close">
+            <img src="images/menu-close.png" width="58" height="58" alt="" />
+          </button>
+          <ul class="nav-links">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Drake</a>
+            </li>
+            <li class="nav-item">
+              <a href="lebron.html" class="nav-link">Lebron</a>
+            </li>
+            <li class="nav-item">
+              <a href="denzel.html" class="nav-link">Denzel</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="wrapper">
+        <form action="">
+          <div class="form-group">
+            <p>Choose your favorite Drake song</p>
+            <label for="song">
+              <input
+                type="radio"
+                name="song"
+                value="God's Plan"
+                id="song"
+                class="radio"
+              />
+              God's Plan
+            </label>
+            <label for="song2">
+              <input
+                type="radio"
+                name="song"
+                value="Blessings"
+                id="song2"
+                class="radio"
+              />
+              Blessings
+            </label>
+            <label for="song3">
+              <input
+                type="radio"
+                name="song"
+                value="Churchill Downs"
+                id="song3"
+                class="radio"
+              />
+              Churchill Downs
+            </label>
+            <label for="song4">
+              <input
+                type="radio"
+                name="song"
+                value="Laugh Now Cry Later"
+                id="song4"
+                class="radio"
+              />
+              Laugh Now Cry Later
+            </label>
+
+            <button type="submit" class="submitBtn">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <footer>
+        <p>Coded by: Ify Nonyelu</p>
+      </footer>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
